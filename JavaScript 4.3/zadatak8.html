@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Kalkulator</title>
+</head>
+
+
+<body>
+
+
+<h2>Kalkulator</h2>
+
+
+<input type="number" id="broj1" placeholder="Prvi broj">
+
+<input type="number" id="broj2" placeholder="Drugi broj">
+
+
+<br><br>
+
+
+<button onclick="racunaj('+')">+</button>
+<button onclick="racunaj('-')">-</button>
+<button onclick="racunaj('*')">*</button>
+<button onclick="racunaj('/')">/</button>
+
+
+<br><br>
+
+
+<button onclick="racunaj('sin')">sin</button>
+<button onclick="racunaj('cos')">cos</button>
+<button onclick="racunaj('tan')">tan</button>
+<button onclick="racunaj('ln')">ln</button>
+<button onclick="racunaj('log')">log10</button>
+
+
+<br><br>
+
+
+<button onclick="racunaj('kvadrat')">
+x²
+</button>
+
+<button onclick="racunaj('kub')">
+x³
+</button>
+
+
+<button onclick="racunaj('power')">
+xʸ
+</button>
+
+
+
+<script>
+
+
+function racunaj(operacija)
+{
+
+
+let a =
+Number(document.getElementById("broj1").value);
+
+
+let b =
+Number(document.getElementById("broj2").value);
+
+
+
+let rezultat;
+
+
+
+switch(operacija)
+{
+
+
+case "+":
+rezultat=a+b;
+break;
+
+
+case "-":
+rezultat=a-b;
+break;
+
+
+case "*":
+rezultat=a*b;
+break;
+
+
+case "/":
+rezultat=a/b;
+break;
+
+
+case "sin":
+rezultat=Math.sin(a);
+break;
+
+
+case "cos":
+rezultat=Math.cos(a);
+break;
+
+
+case "tan":
+rezultat=Math.tan(a);
+break;
+
+
+case "ln":
+rezultat=Math.log(a);
+break;
+
+
+case "log":
+rezultat=Math.log10(a);
+break;
+
+
+case "kvadrat":
+rezultat=a*a;
+break;
+
+
+case "kub":
+rezultat=a*a*a;
+break;
+
+
+case "power":
+rezultat=Math.pow(a,b);
+break;
+
+
+}
+
+
+alert("Rezultat: " + rezultat);
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

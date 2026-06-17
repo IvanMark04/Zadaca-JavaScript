@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Ocjena</title>
+</head>
+
+
+<body>
+
+
+<form>
+
+<input type="text" id="ocjena">
+
+<button type="button" onclick="provjeri()">
+Provjeri
+</button>
+
+</form>
+
+
+
+<script>
+
+
+function provjeri()
+{
+
+let ocjena =
+document.getElementById("ocjena").value;
+
+
+let tekst;
+
+
+switch(ocjena)
+{
+
+case "1":
+tekst="Nedovoljan";
+break;
+
+
+case "2":
+tekst="Dovoljan";
+break;
+
+
+case "3":
+tekst="Dobar";
+break;
+
+
+case "4":
+tekst="Vrlo dobar";
+break;
+
+
+case "5":
+tekst="Odličan";
+break;
+
+
+default:
+tekst="Neispravan unos";
+
+}
+
+
+alert(tekst);
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

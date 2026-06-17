@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Žarulja</title>
+</head>
+
+
+<body>
+
+
+<h2>Prekidač</h2>
+
+
+<img 
+id="prekidac"
+src="off-removebg-preview.png"
+width="100"
+onclick="promijeni()">
+
+
+
+<br><br>
+
+
+<img 
+id="zarulja"
+src="zarulja_off_2.png"
+width="150">
+
+
+
+<script>
+
+
+let ukljuceno = false;
+
+
+
+function promijeni()
+{
+
+
+ukljuceno = !ukljuceno;
+
+
+
+if(ukljuceno)
+{
+
+document.getElementById("prekidac").src =
+"on-removebg-preview.png";
+
+
+document.getElementById("zarulja").src =
+"zarulja_on_2.png";
+
+}
+
+
+else
+{
+
+document.getElementById("prekidac").src =
+"off-removebg-preview.png";
+
+
+document.getElementById("zarulja").src =
+"zarulja_off_2.png";
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Sredine</title>
+</head>
+
+<body>
+
+<h2>Izračun sredina</h2>
+
+<p id="rezultat"></p>
+
+
+<script>
+
+
+let unos = prompt(
+"Unesite brojeve odvojene zarezom:"
+);
+
+
+let brojevi = unos.split(",").map(Number);
+
+
+
+let suma = 0;
+
+for(let broj of brojevi)
+{
+    suma += broj;
+}
+
+
+let aritmeticka = suma / brojevi.length;
+
+
+let umnozak = 1;
+
+
+for(let broj of brojevi)
+{
+    umnozak *= broj;
+}
+
+
+let geometrijska = Math.pow(
+    umnozak,
+    1 / brojevi.length
+);
+
+
+
+document.getElementById("rezultat").innerHTML =
+"Aritmetička sredina: " + aritmeticka +
+"<br>Geometrijska sredina: " + geometrijska;
+
+
+
+</script>
+
+
+</body>
+
+</html>

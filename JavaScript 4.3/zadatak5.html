@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Registracija</title>
+</head>
+
+
+<body>
+
+
+<input type="text" id="registracija">
+
+
+<button onclick="validiraj()">
+Provjeri
+</button>
+
+
+<script>
+
+
+function provjeraTablice(tablica)
+{
+
+let pravilo =
+/^[A-Z]{1,2}\d{3}-[A-Z]{1,2}$/;
+
+
+return pravilo.test(tablica);
+
+}
+
+
+
+function validiraj()
+{
+
+let unos =
+document.getElementById("registracija").value;
+
+
+if(provjeraTablice(unos))
+{
+alert("Ispravan format");
+}
+
+else
+{
+alert("Neispravan format");
+}
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
