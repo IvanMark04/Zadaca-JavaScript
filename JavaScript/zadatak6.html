@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rad s poljima</title>
+</head>
+
+
+<body>
+
+
+<script>
+
+
+let polje = new Array(
+1,2,3,4,7,8,5,6,9,55,74,11,33
+);
+
+
+
+document.write(
+"Početna dužina polja: "
++ polje.length
++ "<br><br>"
+);
+
+
+
+let najveci = [...polje].sort(function(a,b)
+{
+    return b-a;
+});
+
+
+document.write(
+"Sortirano najveće prema najmanjem: "
++ najveci
++ "<br><br>"
+);
+
+
+
+
+let najmanji = [...polje].sort(function(a,b)
+{
+    return a-b;
+});
+
+
+document.write(
+"Sortirano najmanje prema najvećem: "
++ najmanji
++ "<br><br>"
+);
+
+
+
+najmanji.pop();
+
+
+document.write(
+"Nakon uklanjanja zadnjeg člana: "
++ najmanji
++ "<br><br>"
+);
+
+
+
+
+najmanji.push(19,22);
+
+
+document.write(
+"Nakon dodavanja 19 i 22: "
++ najmanji
++ "<br><br>"
+);
+
+
+
+
+let polje2 = [
+"Banana",
+"Orange",
+"Apple",
+"Mango"
+];
+
+
+let polje_final = najmanji.concat(polje2);
+
+
+
+document.write(
+"Finalno polje: "
++ polje_final
+);
+
+
+
+</script>
+
+
+</body>
+
+</html>
