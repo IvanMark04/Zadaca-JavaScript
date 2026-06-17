@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Random brojevi</title>
+</head>
+
+<body>
+
+
+<script>
+
+
+function randomBrojevi(a,b)
+{
+
+
+for(let i = 0; i < 5; i++)
+{
+
+let broj = Math.floor(
+Math.random() * (b-a+1)
+) + a;
+
+
+document.write(
+broj + "<br>"
+);
+
+
+console.log(broj);
+
+}
+
+
+}
+
+
+
+randomBrojevi(10,50);
+
+
+
+</script>
+
+
+</body>
+
+</html>

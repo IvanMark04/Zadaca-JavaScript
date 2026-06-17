@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Temperature</title>
+</head>
+
+
+<body>
+
+
+<script>
+
+
+const tempDay = [
+'2023-11-29',
+-1,0,-0.5,0.5,0,
+1.2,1.8,2,3,4,6,
+9,12,7,6,6,8,
+5,4,2,3,2,1,0
+];
+
+
+
+function obradiTemperature(temp)
+{
+
+
+let datum = temp[0];
+
+
+let temperature = temp.slice(1);
+
+
+
+let min = Math.min(...temperature);
+
+let max = Math.max(...temperature);
+
+
+
+let suma = 0;
+
+
+for(let t of temperature)
+{
+    suma += t;
+}
+
+
+let prosjek = suma / temperature.length;
+
+
+
+console.log("Datum:", datum);
+
+console.log("Najmanja temperatura:", min);
+
+console.log("Najveća temperatura:", max);
+
+console.log("Prosječna temperatura:", prosjek);
+
+
+
+document.write(
+"Datum: " + datum + "<br>"
+);
+
+document.write(
+"Min temperatura: " + min + "<br>"
+);
+
+document.write(
+"Max temperatura: " + max + "<br>"
+);
+
+document.write(
+"Prosjek: " + prosjek
+);
+
+
+
+}
+
+
+
+obradiTemperature(tempDay);
+
+
+
+</script>
+
+
+</body>
+
+</html>

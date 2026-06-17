@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Anonimna funkcija</title>
+</head>
+
+<body>
+
+
+<script>
+
+
+let kvadrat = function(broj)
+{
+
+if(typeof broj === "number")
+{
+    return broj * broj;
+}
+
+else
+{
+    return "Greška: nije broj";
+}
+
+};
+
+
+
+document.write(kvadrat(5) + "<br>");
+
+document.write(kvadrat("abc"));
+
+
+
+</script>
+
+
+</body>
+
+</html>

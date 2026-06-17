@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+<meta charset="UTF-8">
+<title>Polja</title>
+</head>
+
+
+<body>
+
+
+<script>
+
+
+let polje = new Array(
+1,2,3,4,7,8,5,6,9,55,12,4,85
+);
+
+
+
+// a
+
+document.write(
+"Dužina polja: "
++ polje.length
++ "<br><br>"
+);
+
+
+
+
+// b
+
+let najvece = [...polje].sort(function(a,b)
+{
+return b-a;
+});
+
+
+document.write(
+"Najveće prema najmanjem: "
++ najvece
++ "<br><br>"
+);
+
+
+
+
+
+// c
+
+let najmanje = [...polje].sort(function(a,b)
+{
+return a-b;
+});
+
+
+document.write(
+"Najmanje prema najvećem: "
++ najmanje
++ "<br><br>"
+);
+
+
+
+
+
+// d
+
+najmanje.pop();
+
+
+document.write(
+"Nakon brisanja zadnjeg: "
++ najmanje
++ "<br><br>"
+);
+
+
+
+
+
+// e
+
+najmanje.push(19,22);
+
+
+document.write(
+"Dodano 19 i 22: "
++ najmanje
++ "<br><br>"
+);
+
+
+
+
+
+// f
+
+
+let polje2 = [
+"Banana",
+"Orange",
+"Apple",
+"Mango"
+];
+
+
+let polje_final = najmanje.concat(polje2);
+
+
+
+document.write(
+"Finalno polje: "
++ polje_final
+);
+
+
+
+</script>
+
+
+</body>
+
+</html>
